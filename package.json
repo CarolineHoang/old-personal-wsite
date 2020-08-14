@@ -2,7 +2,7 @@
   "name": "wsite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://carolinehoang.github.io",
+  "homepage": "https://carolinehoang.github.io/old-personal-wsite",
 
   "dependencies": {
     "body-parser": "^1.18.3",
