@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+
+footer {
+  background: #666;
+  text-align: center;
+  line-height: 1.5em;
+  padding: 2.5em 0;
+  color: #fff;
+}
+
+h1 {
+  color: white; /*#666;*/
+  position: relative;
+  z-index: 1;
+  transition: all .5s ease-in-out;
+}
+
+h2 {
+  color: rgb(53, 131, 255); /*#666;*/
+  position: relative;
+  z-index: 1000;
+  transition: all .5s ease-in-out;
+}
+
+
+.paper {
+  width: 25em;
+  height: 10em;
+  position: absolute;
+  display: block;
+  top: 2em;
+  left: 2.5em;
+  background: rgba(68, 68, 136, 0.7);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  z-index: 1;
+  text-align: center;
+  padding: 1em;
+  box-sizing: border-box;
+  box-shadow: 
+  0px 0px 30px  rgba(255, 255, 255, 0.7)
+;
+}
+
+.clickBaiter {
+  width: 25em;
+  height: 15em;
+  position: absolute;
+  display: block;
+  top: 2em;
+  left: 2.5em;
+  background: rgba(68, 68, 136, 0.0);
+  -webkit-transition: 2s ease-in-out;
+  -moz-transition: 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  transition-delay: 1s;
+  z-index: 100;
+  text-align: center;
+  padding: 1em;
+  box-sizing: border-box;
+
+  animation-duration: 3s;
+  animation-name: boppin;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+ 
+  
+}
+
+@keyframes boppin{
+from {
+  transform: translate(0px,5px);
+  color: rgb(53, 131, 255);
+
+}
+
+to {
+  transform: translate(0px,-10px);
+  color: #30c4ff;
+}
+
+}
+
+.back {
+  display: block;
+  position: relative;
+  background: #bbbbbb;
+  top: 0vw;
+  height: 0;
+  width: 30em;
+  height: 17em;
+  content: "";
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  transition: all  .5s ease-in-out;
+  box-shadow: 
+              0px 0px 30px  rgba(255, 255, 255, 0.7)
+  ;
+  z-index: 0;
+}
+
+
+
+
+.container {
+  margin: 0 auto 0 auto;
+  padding: 10em 1em 1em 1em;
+  width: 30em;
+  height: 20em;
+  position: absolute;
+  top: 15vw;
+  left: 30vw;
+  overflow: visible; /*hidden*/
+  display: block;
+  z-index: 0;
+  transition: all .5s ease-in-out;
+
+}
+.container .cover {
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  height: 1em;
+  display: block;
+  -moz-transform: translate(-50%, 0%) scaleY(1);
+  -webkit-transform: translate(-50%, 0%) scaleY(1);
+  transform: translate(-50%, 0%) scaleY(1);
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  margin: 0 auto;
+
+  border: 15em solid transparent;
+  
+  border-top: 10em solid white;
+  border-bottom: 15em solid transparent;
+  border-right: 15em solid transparent;
+  border-left: 15em solid transparent;
+  border-image-width: 100% 100% 0 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: z-index .5s ease-in-out, transform .5s ease-in-out, border-top .5s ease-in-out;
+  transition-delay: .5s;
+  z-index: 30;
+}
+.container:hover .back {
+  top: 10em;
+  z-index: 0;
+}
+.container:hover .back .paper {
+  top: -15em;
+  z-index: 45;
+  height: 30em;
+  transition: z-index .5s ease-in-out, top .5s ease-in-out, height .5s ease-in-out;
+  transition-delay: .5s;
+}
+.container:hover .cover {
+  border-top: 10em solid #eee;
+  -moz-transform: translate(-50%, -100%) scaleY(-1);
+  -webkit-transform: translate(-50%, -100%) scaleY(-1);
+  transform: translate(-50%, -100%) scaleY(-1);
+  z-index: 0;
+  transition-delay: 0s;
+}
+.container .bottom {
+  width: 0;
+  margin: 0 auto;
+  position: relative;
+  top: 0em;
+  display: block;
+  border-left: 15em solid #eee;
+  border-right: 15em solid #eee;
+  border-bottom: 7em solid #eee;
+  border-top: 10em solid transparent;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  z-index: 100;
+}
+
+
+.container:hover .clickBaiter{
+  transition: 1s;
+  opacity: 0.0;
+}
+.container:not( :hover ) {
+
+  animation-delay: 6s;
+  animation-duration: 1s;
+  animation-name: noticeMe;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes noticeMe {
+
+  from {
+    transform: rotate(-0.002turn);
+  
+  }
+  
+  to {
+    transform: rotate(0.002turn);
+  }
+
+}
